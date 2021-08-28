@@ -3,21 +3,21 @@
   <br>
 
   <h2>Informe o valor a pagar:</h2>
-  <input class="form-control" type="text" [(ngModel)]="v"/>
+  <input class="form-control" type="text" [(ngModel)]="valor"/>
   <br>
 
-  <h2>Informe em quantas vezes pagará:</h2>
-  <input class="form-control" type="text" [(ngModel)]="n"/>
+  <h2>Informe o tempo (em meses):</h2>
+  <input class="form-control" type="text" [(ngModel)]="parcelas"/>
   <br>
 
   <h2>Informe a taxa de juros por mês (em %):</h2>
-  <input class="form-control" type="text" [(ngModel)]="j"/>
+  <input class="form-control" type="text" [(ngModel)]="juros"/>
   <br>
 
   <table>
-    <tr>
-      <td>Será acrescentado </td>
-      <td>${{calculo()}} de juros ao mês</td>
+    <tr *ngFor="let item of calculo(); index as i">
+      <td>Mês {{i+1}}</td>
+      <td>${{item}} de juros ao mês</td>
     </tr>
   </table>
 </div>
