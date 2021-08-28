@@ -6,9 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./juros-composto.component.css']
 })
 export class JurosCompostoComponent implements OnInit {
-  @Input() v: number;
-  @Input() n: number;
-  @Input() j: number;
+  @Input() valor: number;
+  @Input() parcelas: number;
+  @Input() juros: number;
 
   constructor() {}
 
@@ -16,10 +16,10 @@ export class JurosCompostoComponent implements OnInit {
 
   calculo() {
     let list: number[] = [];
-    let vf: number;
-    for (let i = 1; i <= this.n; i++) {
-      vf = this.v * (1 + this.j / 100) ** this.n;
-      list.push(vf);
+    let valorfuturo: number;
+    for (let i = 1; i <= this.parcelas; i++) {
+      valorfuturo = this.valor * (1 + this.juros / 100) ** this.parcelas;
+      list.push(valorfuturo);
     }
     return list;
   }
