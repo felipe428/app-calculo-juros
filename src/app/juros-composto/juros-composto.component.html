@@ -1,3 +1,23 @@
-<p>
-juros-composto works!
-</p>
+<div class="container-fluid">
+  <h1>Juros Composto</h1>
+  <br>
+
+  <h2>Informe o valor a pagar:</h2>
+  <input class="form-control" type="text" [(ngModel)]="v"/>
+  <br>
+
+  <h2>Informe em quantas vezes pagará:</h2>
+  <input class="form-control" type="text" [(ngModel)]="n"/>
+  <br>
+
+  <h2>Informe a taxa de juros por mês (em %):</h2>
+  <input class="form-control" type="text" [(ngModel)]="j"/>
+  <br>
+
+  <table>
+    <tr *ngFor="let item of calculo(); index as i">
+      <td>Mês {{i+1}}</td>
+      <td>-->{{item}}</td>
+    </tr>
+  </table>
+</div>

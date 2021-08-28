@@ -1,3 +1,23 @@
-<p>
-juros-simples works!
-</p>
+<div class="container-fluid">
+  <h1>Juros Simples</h1>
+  <br>
+
+  <h2>Informe o valor a pagar:</h2>
+  <input class="form-control" type="text" [(ngModel)]="v"/>
+  <br>
+
+  <h2>Informe em quantas vezes pagará:</h2>
+  <input class="form-control" type="text" [(ngModel)]="n"/>
+  <br>
+
+  <h2>Informe a taxa de juros por mês (em %):</h2>
+  <input class="form-control" type="text" [(ngModel)]="j"/>
+  <br>
+
+  <table>
+    <tr>
+      <td>Será acrescentado </td>
+      <td>${{calculo()}} de juros ao mês</td>
+    </tr>
+  </table>
+</div>
