@@ -1,23 +1,23 @@
 <div class="container-fluid">
-<h1>Juros Composto</h1>
-<br>
+  <h1>Juros Composto</h1>
+  <br>
 
-<h2>Informe o valor a pagar:</h2>
-<input class="form-control" type="text" [(ngModel)]="valor"/>
-<br>
+  <h2>Informe o valor a pagar:</h2>
+  <input class="form-control" type="text" [(ngModel)]="valor"/>
+  <br>
 
-<h2>Informe o tempo (em meses):</h2>
-<input class="form-control" type="text" [(ngModel)]="parcelas"/>
-<br>
+  <h2>Informe o tempo (em meses):</h2>
+  <input class="form-control" type="text" [(ngModel)]="parcelas"/>
+  <br>
 
-<h2>Informe a taxa de juros por mês (em %):</h2>
-<input class="form-control" type="text" [(ngModel)]="juros"/>
-<br>
+  <h2>Informe a taxa de juros por mês (em %):</h2>
+  <input class="form-control" type="text" [(ngModel)]="juros"/>
+  <br>
 
-<table>
-  <tr *ngFor="let item of calculo(); index as i">
-    <td>Mês {{i+1}}</td>
-    <td>-->{{item}}</td>
-  </tr>
-</table>
+  <table>
+    <tr *ngFor="let item of calculo(); index as i">
+      <td>Mês {{i+1}}</td>
+      <td>-->R$<b>{{item}}</b></td>
+    </tr>
+  </table>
 </div>

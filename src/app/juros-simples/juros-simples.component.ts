@@ -16,12 +16,11 @@ export class JurosSimplesComponent implements OnInit {
 
   calculo() {
     let list: number[] = [];
-    let valorfuturo: number;
-    let total: number;
+    let valorfuturo = this.valor * (this.juros / 100);
+    let total = this.valor;
     for (let i = 1; i <= this.parcelas; i++) {
-      valorfuturo = this.valor * (1 + (this.juros / 100) * this.parcelas);
-      total = valorfuturo - this.valor;
-      list.push(total);
+      list.push(Number(valorfuturo) + Number(total));
+      total = Number(total) + Number(valorfuturo);
     }
     return list;
   }
